@@ -1,0 +1,30 @@
+package com.perf;
+
+public class FibTest {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public void doTest() {
+		long fib = 0;
+		long then = System.currentTimeMillis();
+		for(int i=0;i<10;i++){
+			fib = fibImpl(i);
+			System.out.println();
+		}
+		
+	}
+	
+	public long fibImpl(int n) {
+		if(n==0) return 0;
+		if(n==1) return 1;
+		
+		long retval = fibImpl(n-2) + fibImpl(n-1);
+		
+		return retval;
+				
+		
+	}
+	
+}
