@@ -1,0 +1,14 @@
+package com.perf;
+
+import java.util.ArrayList;
+
+public class MemoryLeak {
+	
+	ArrayList<BadEquals>  list = new ArrayList<BadEquals>(10000);
+
+	public static void main(String[] args) {
+		
+		boolean val = true;
+		
+	}
+}
