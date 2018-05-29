@@ -8,4 +8,5 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.perf.MemoryLeak"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PerfmTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-XX:+HeapDumpOnOutOfMemoryError -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseG1GC -Xloggc:memleak.log  -XX:MaxGCPauseMillis=100  -XX:NumberOfGCLogFiles=10 -XX:-UseGCLogFileRotation -XX:GCLogFileSize=1024K"/>
 </launchConfiguration>
