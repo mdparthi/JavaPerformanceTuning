@@ -21,17 +21,17 @@ public class BenchMark {
     public static class ExecutionPlan {
 
 //        @Param({ "100", "200", "300", "500", "1000" })
-        @Param({ "10", "20" })
-        public int iterations;
+        @Param({ "10"})
+        public int n;
 
-        public Hasher murmur3;
-
-        public String password = "4v3rys3kur3p455w0rd";
-
-        @Setup(Level.Invocation)
-        public void setUp() {
-            murmur3 = Hashing.murmur3_128().newHasher();
-        }
+//        public Hasher murmur3;
+//
+//        public String password = "4v3rys3kur3p455w0rd";
+//
+//        @Setup(Level.Invocation)
+//        public void setUp() {
+//            murmur3 = Hashing.murmur3_128().newHasher();
+//        }
     }
 
 //    @Fork(value = 1, warmups = 1)
@@ -50,16 +50,13 @@ public class BenchMark {
     @Benchmark
     @Fork(value = 1, warmups = 1)
     @BenchmarkMode(Mode.Throughput)
-    public void init() {
-        // Do nothing
+    public void init(ExecutionPlan plan) {
+        fibimpl(plan.n);
     }
 
-	int n=10;
 	
-	@Benchmark
-	@Fork(value = 1, warmups = 1)
-	@BenchmarkMode(Mode.AverageTime)
-	public long fibimpl() {
+	
+	public long fibimpl(int n) {
 		if(n==0) return 0;
 		if(n==1) return 1;
 		long n1=0, n2=1, n3=1;
