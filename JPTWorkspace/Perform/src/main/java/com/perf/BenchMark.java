@@ -49,7 +49,7 @@ public class BenchMark {
 //
     @Benchmark
     @Fork(value = 1, warmups = 1)
-    @BenchmarkMode(Mode.Throughput)
+    @BenchmarkMode(Mode.SampleTime)
     public void init(ExecutionPlan plan) {
         fibimpl(plan.n);
     }
