@@ -3,4 +3,7 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.perf.FibTest"/>
 <fullyQualifiedTypeName name="com.perf.BadEquals"/>
+<fullyQualifiedTypeName name="org.openjdk.jmh.annotations.Benchmark"/>
+<fullyQualifiedTypeName name="org.openjdk.jmh.annotations.BenchmarkMode"/>
+<fullyQualifiedTypeName name="com.perf.BenchMark.ExecutionPlan"/>
 </qualifiedTypeNameHistroy>
